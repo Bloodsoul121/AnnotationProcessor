@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.blood.annotationprocessor.runtime.GET;
 import com.blood.annotationprocessor.runtime.RuntimeTest;
+import com.blood.annotations.Bind;
 
 import java.lang.reflect.Method;
 
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.runtime)
     Button mRuntime;
+
+    @Bind(value = R.id.compile)
+    Button mCompile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
