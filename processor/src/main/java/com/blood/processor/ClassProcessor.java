@@ -18,9 +18,12 @@ import javax.lang.model.element.ElementKind;
 import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 
-@AutoService(Processor.class)
-@SupportedSourceVersion(SourceVersion.RELEASE_8) //指定java版本
-@SupportedAnnotationTypes({"com.blood.annotations.Bind"}) //处理的注解
+/**
+ *  这里先取消注册，注解处理器只能有一个，多的不生效
+ */
+//@AutoService(Processor.class)
+@SupportedSourceVersion(SourceVersion.RELEASE_7)
+@SupportedAnnotationTypes({"com.blood.annotations.Bind"})
 public class ClassProcessor extends AbstractProcessor {
 
     @Override
